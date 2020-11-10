@@ -19,8 +19,6 @@ var p = {\
  q.f1();\
  q.f2();\
  
- [참고자료](https://velog.io/@marcus/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%8A%A4%EC%BD%94%ED%94%84)
- 
  ### var-let-const
  
  > var를 사용하면 변수 선언의 경우 할당되는 값이 유동적으로 변경될 수 있는 단점이 있다.\
@@ -91,3 +89,6 @@ console.log(hello) // Error, hello is not defined
 }
 console.log(hello) // Error, hello is not defined
 ```
+
+출처
+[velog](https://velog.io/@marcus/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%8A%A4%EC%BD%94%ED%94%84)
