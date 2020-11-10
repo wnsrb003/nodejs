@@ -66,3 +66,27 @@ if(typeof foo === 'string'){
 
 console.log(result);    // result : result is not defined
 ```
+
+### 함수 스코프
+> 여러분이 만약 함수 내부에서 변수를 선언한다면, 그 변수는 선언한 함수 내부에서만 사용이 가능합니다.
+
+예제
+```
+function marcusHello () {
+  const hello = 'Hello Marcus!'
+  console.log(hello)
+}
+marcusHello() // 'Hello Marcus!!'
+console.log(hello) // Error, hello is not defined
+```
+### 함수 스코프
+> 블록 스코프는 여러분이 중괄호 {}내부에서 const 또는 let으로 변수를 선언하면, 그 변수들은 중괄호 블록 내부에서만 사용이 가능합니다.
+
+예제
+```
+{
+  const hello = 'Hello Marcus!'
+  console.log(hello) // 'Hello Marcus!'
+}
+console.log(hello) // Error, hello is not defined
+```
