@@ -92,3 +92,35 @@ console.log(hello) // Error, hello is not defined
 
 출처
 [velog](https://velog.io/@marcus/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%8A%A4%EC%BD%94%ED%94%84)
+
+### 동기식 async/await 
+```
+// 비동기적으로 동작하여 1->3->2 로 출력
+// function printNum(number, delaySec){
+//   return setTimeout(() => console.log('2'), delaySec);
+// }
+//
+// function logPrintNum(number, delaySec){
+//   console.log('1');          //1번쨰
+//   printNum(number, delaySec);                          //2번째
+//   console.log('3');          //3번째
+// }
+//
+// logPrintNum(1,0);
+
+// 동기적으로 동작 1->2->3 출력
+function printNum(number, delaySec){
+  return new Promise((resolve) => setTimeout(() =>{
+    console.log('2');
+    resolve();
+  }, delaySec));
+}
+
+async function logPrintNum(number, delaySec){
+  console.log('1');
+  await printNum(number, delaySec);
+  console.log('3');
+}
+
+logPrintNum(1,0);
+```
