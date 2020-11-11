@@ -136,3 +136,32 @@ logPrintNum(1,0);
 3. res, req 객체 변경 가능
 4. 요청-응답 주기를 종료(response methods를 이용)
 
+연습코드
+```
+var express = require('express');
+var app = express();
+var a = require('./a');
+var b = require('./b');
+var one = 1;
+var two = 2;
+
+var sum = function (req, res, next) {
+  req.sum = a.Sum(one, two);
+  next();
+};
+
+var multi = function (req, res, next) {
+  req.multi = b.Multi(one, two);
+  next();
+};
+
+app.use(sum);
+app.use(multi);
+
+app.get('/', function (req, res) {
+  var responseText = req.sum + '\n' + req.multi;
+  res.send(responseText);
+});
+
+app.listen(3000);
+```
