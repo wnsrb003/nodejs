@@ -165,3 +165,8 @@ app.get('/', function (req, res) {
 
 app.listen(3000);
 ```
+
+### express router
+
+### express 응답 객체
+[라우터의 request, response객체](https://luckyyowu.tistory.com/346)
