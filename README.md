@@ -21,9 +21,9 @@ var p = {\
  
  ### var-let-const
  
- > var를 사용하면 변수 선언의 경우 할당되는 값이 유동적으로 변경될 수 있는 단점이 있다.\
- > let과 const의 차이점은 변수의 immutable여부이다.\
-   let은 변수에 재할당이 가능하지만, const는 변수 재선언, 재할당 모두 불가능하다.
+ > var를 사용하면 변수 선언의 경우 할당되는 값이 유동적으로 변경될 수 있는 단점이 있다.
+ > let과 const의 차이점은 변수의 immutable여부이다.
+ > let은 변수에 재할당이 가능하지만, const는 변수 재선언, 재할당 모두 불가능하다.
 
 ```
 // let
@@ -167,7 +167,7 @@ app.listen(3000);
 ```
 
 ### express router
-- express.Router 클래스를 사용하면 모듈식 마운팅 가능한 핸들러를 작성할 수 있습니다.\
+- express.Router 클래스를 사용하면 모듈식 마운팅 가능한 핸들러를 작성할 수 있습니다.
 - Router 인스턴스는 완전한 미들웨어이자 라우팅 시스템이며, 따라서 “미니 앱(mini-app)”이라고 불리는 경우가 많습니다.
 ```
 var express = require('express');
