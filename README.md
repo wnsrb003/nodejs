@@ -167,6 +167,22 @@ app.listen(3000);
 ```
 
 ### express router
+> - express.Router 클래스를 사용하면 모듈식 마운팅 가능한 핸들러를 작성할 수 있습니다.\
+   -Router 인스턴스는 완전한 미들웨어이자 라우팅 시스템이며, 따라서 “미니 앱(mini-app)”이라고 불리는 경우가 많습니다.
+```
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.send('Homepage');
+});
+
+router.get('/1ist', function(req,res){
+  res.send('main 1ist');
+})
+module.exports = router;
+```
 
 ### express 응답 객체
 [라우터의 request, response객체](https://luckyyowu.tistory.com/346)
