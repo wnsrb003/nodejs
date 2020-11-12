@@ -124,7 +124,37 @@ async function logPrintNum(number, delaySec){
 
 logPrintNum(1,0);
 ```
+### async 예외 처리
+```
+function fetchItems() {
+  return new Promise(function(resolve){
+    var items = {
+      id:12,
+      pw:2
+    };
+        setTimeout(function(){
+          resolve(items);
+        }, 1000
+      );
+  });
+  }
 
+async function logItems() {
+  try{
+    var printitems = await fetchItems();
+    if(printitems.id == 1){
+        console.log(printitems);
+    }else {
+      console.log('!id : 1');
+      throw console.error('ERR!!!!');
+    }
+  } catch (error){
+    console.log(error);
+  }
+}
+
+logItems();
+```
 ### Middleware
 > 미들웨어 함수는 req(요청) 객체, res(응답) 객체, 그리고 어플리케이션 요청-응답 사이클 도중 그 다음의 미들웨어 함수에 대한 엑세스 권한을 갖는 함수이다.\
   미들웨어란 간단하게 말하면 클라이언트에게 요청이 오고 그 요청을 보내기 위해 응답하려는 중간(미들)에 목적에 맞게 처리를 하는, 말하자면 거쳐가는 함수들이라고 보면 되겠다.\
@@ -186,3 +216,4 @@ module.exports = router;
 
 ### express 응답 객체
 [라우터의 request, response객체](https://luckyyowu.tistory.com/346)
+
