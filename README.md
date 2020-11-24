@@ -217,3 +217,5 @@ module.exports = router;
 ### express 응답 객체
 [라우터의 request, response객체](https://luckyyowu.tistory.com/346)
 
+### HTTP 응답 코드
+[나무위키](https://namu.wiki/w/HTTP/%EC%9D%91%EB%8B%B5%20%EC%BD%94%EB%93%9C)
