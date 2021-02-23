@@ -222,3 +222,9 @@ module.exports = router;
 
 ### Restful
 [참고](https://sanghaklee.tistory.com/57)
+
+### async, await 추가
+- 사용 법
+먼저 함수의 앞에 async 라는 예약어를 붙입니다. \
+그러고 나서 함수의 내부 로직 중 HTTP 통신을 하는 비동기 처리 코드 앞에 await를 붙입니다.\
+# 여기서 주의하셔야 할 점은 비동기 처리 메서드가 꼭 프로미스 객체를 반환해야 await가 의도한 대로 동작합니다.
