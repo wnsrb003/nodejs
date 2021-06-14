@@ -228,3 +228,18 @@ module.exports = router;
 먼저 함수의 앞에 async 라는 예약어를 붙입니다. \
 그러고 나서 함수의 내부 로직 중 HTTP 통신을 하는 비동기 처리 코드 앞에 await를 붙입니다.\
 # 여기서 주의하셔야 할 점은 비동기 처리 메서드가 꼭 프로미스 객체를 반환해야 await가 의도한 대로 동작합니다.
+
+### 버퍼와 스트림
+버퍼 - 모든 내용을 다 써서 데이터를 모으는 동작(다 쓰기 전에는 활용 불가 - 메모리 문제 발생)
+스트림 - 버퍼를 쪼개서 나눠 보내는 것
+```
+//스트림 
+const fs = require('fs');
+const readStream = fs.createReadStream('./test.txt', { highWaterMark: 16});
+const data = [];
+
+readStream.on('data', (chunk) => {
+ data.push(chunk);
+ console.log(chunk, chunk.length) // 버퍼 출력
+});
+```
