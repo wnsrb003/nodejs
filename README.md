@@ -242,4 +242,8 @@ readStream.on('data', (chunk) => {
  data.push(chunk);
  console.log(chunk, chunk.length) // 버퍼 출력
 });
+readStream.on('end', () => {
+console.log(Buffer.concat(data).toString()); //end 시, 버퍼 합쳐서 문자열로 출력
+});
+//error처리
 ```
